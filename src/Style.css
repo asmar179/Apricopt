@@ -1,0 +1,163 @@
+*{
+    padding:0;
+    margin: 0;
+}
+  
+   .items {
+    color: white;
+    font-weight: 700;
+  }
+  
+  
+  .header {
+    background-color:#28a745d1;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  .header:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: .3;
+    z-index: -1;
+    background: linear-gradient(to right, #1e1e1e 0%, #1ab11a 0%, blue  100% );
+
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; 
+  }
+  
+  .header li a {
+    display: block;
+    padding: 15px 15px;
+    border-right: 3px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+    color: #28a745d1;
+    padding-bottom: 35px; 
+   }
+  .logo{
+    color: white;
+    font-weight: 700;
+  } 
+   .logo:hover{
+    color: #075f17d1;
+  }
+   
+   .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  .header .menu { */
+     clear: both;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+  }
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none; 
+   }
+  
+  .header .menu-icon .navicon {
+    background-color:white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    
+     background-color:white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-out;
+    width: 100%;
+  } 
+  
+   .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 20px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }  
+  .img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+  .my-custom-scrollbar {
+    position: relative;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+} 
